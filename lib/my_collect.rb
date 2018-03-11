@@ -1,12 +1,13 @@
 
+
 def my_collect(array)
-  counter = 1
+  i = 0
   collection = []
-  while counter < array.length
+  while i < array.length
     collection << yield(array[i])
     i += 1
-end
-collection
+  end
+  collection
 end
 
 my_collect(array) { |name| "Hi, #{name}" }
